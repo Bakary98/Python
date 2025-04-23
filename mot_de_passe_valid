@@ -1,0 +1,14 @@
+## Vérification mot de passe
+mdp = input("Entrez un mot de passe (min 8 caractères) : ")
+mdp_trop_court = "votre mot de passe est trop court."
+nbre_mdp = len(list(mdp))
+
+if nbre_mdp < 8 :
+    print(mdp_trop_court)
+else:
+    nombre_chiffre=sum(c.isdigit() for c in mdp)
+    if nombre_chiffre == 8:
+        print("Votre mot de passe ne contient que des nombres.")
+    else:
+        print("Inscription terminée.")
+  
