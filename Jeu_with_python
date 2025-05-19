@@ -38,16 +38,17 @@ while True:
             else:
                 print(f"Vous n'avez plus de potion à prendre.....")
                 continue
-        # Your ennemy attack
-        ennemy_attack  = random.randint(5,15)
-        PLAYER_HEALTH -= ennemy_attack
-        print(f"L'attaque de l'ennemi vous inflige des dégâts de {ennemy_attack} points de vie.")
-        
         if ENNEMY_HEALTH <=0 :
-                print (f"Bravooo!!!! Vous avez gagné!!!")
-        if PLAYER_HEALTH <=0 :
-            print (f"Dommage!!!! Vous avez perdu!!! ") 
-            
-        # le nombre de points de vie restants du joueur et de l'ennemi.
-        print(f"Les points de vie  restants du joueur sont {PLAYER_HEALTH}")  
-        print(f"Les points de vie restants de l'ennemie sont {ENNEMY_HEALTH}")
+        print (f"Bravooo!!!! Vous avez gagné!!!")
+        break
+    # Your ennemy attack
+    ennemy_attack  = random.randint(5,15)
+    PLAYER_HEALTH -= ennemy_attack
+    print(f"L'attaque de l'ennemi vous inflige des dégâts de {ennemy_attack} points de vie.")
+        
+    if PLAYER_HEALTH <=0 :
+        print (f"Dommage!!!! Vous avez perdu!!! ") 
+        break
+    # le nombre de points de vie restants du joueur et de l'ennemi.
+    print(f"Les points de vie  restants du joueur sont {PLAYER_HEALTH}")  
+    print(f"Les points de vie restants de l'ennemie sont {ENNEMY_HEALTH}")
